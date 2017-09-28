@@ -1,0 +1,20 @@
+﻿<Window x:Class="Youtube_Wiew_Increaser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Youtube_Wiew_Increaser"
+        mc:Ignorable="d"
+        
+        Title="Youtube Wiew Increaser 1.0" Height="350" Width="525">
+    <Window.Background>
+        <ImageBrush ImageSource="8aa43318b59561b47568faf4c1f80e6f.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Button Content="Start" Margin="221,186,221,0" VerticalAlignment="Top" Click="Start" FontFamily="Stencil"/>
+        <TextBox Name="UrlBox"  Height="23" Margin="52,52,52,0" AllowDrop="True"  VerticalAlignment="Top" FontWeight="Bold" Background="#FFF0F0F0" Foreground="#FF003F7B" FontFamily="Viner Hand ITC" FontSize="14" Cursor="Pen"/>
+        <TextBlock Margin="146,21,146,0" TextWrapping="Wrap" Text="Enter Your Url" TextAlignment="Center" VerticalAlignment="Top" Height="26" FontFamily="Viner Hand ITC" FontSize="20" Foreground="#FF1109EA"/>
+        <TextBlock Name="WiewBlock" HorizontalAlignment="Left" Margin="195,272,0,0" TextWrapping="Wrap" Text="Your view" TextAlignment="Center"  VerticalAlignment="Top" Width="118" Foreground="White" FontFamily="Snap ITC"/>
+
+    </Grid>
+</Window>

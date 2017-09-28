@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube View Adding", "..\..\Odds\Odds_Comparison_Tool\YViewer\Youtube View Adding.csproj", "{586547E9-5AA0-4737-A481-4FB8A05DA19F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube Wiew Increaser", "Youtube Wiew Increaser\Youtube Wiew Increaser.csproj", "{4A563125-DEA0-4CF5-8F34-9059865A5BE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{586547E9-5AA0-4737-A481-4FB8A05DA19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{586547E9-5AA0-4737-A481-4FB8A05DA19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{586547E9-5AA0-4737-A481-4FB8A05DA19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A563125-DEA0-4CF5-8F34-9059865A5BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A563125-DEA0-4CF5-8F34-9059865A5BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A563125-DEA0-4CF5-8F34-9059865A5BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A563125-DEA0-4CF5-8F34-9059865A5BE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
