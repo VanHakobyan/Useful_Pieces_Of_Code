@@ -105,5 +105,11 @@
   <ItemGroup>
     <Resource Include="09a700dff69595e99dd55b3843ea8c1a.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProxyDownloader\ProxyDownloader.csproj">
+      <Project>{C3296553-B53A-4757-A60A-BC6366DE5631}</Project>
+      <Name>ProxyDownloader</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
