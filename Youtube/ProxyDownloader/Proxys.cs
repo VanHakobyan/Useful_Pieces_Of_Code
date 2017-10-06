@@ -16,14 +16,14 @@ namespace ProxyDownloader
             const string pattern = "<td>(.*?)</td>";
             var html = new WebClient().DownloadString(urlAddress);
             var matches = Regex.Matches(html, pattern);
-            var l = matches.Cast<Match>().Select(match => match.Groups[1]).ToList();
+            var proxyList = matches.Cast<Match>().Select(match => match.Groups[1].Value).ToList();
 
             var addresses = new List<string>();
             var ports = new List<int>();
-            for (var i = 0; i < l.Count; i++)
+            for (var i = 0; i < proxyList.Count; i++)
             {
-                if (i % 4 == 0) addresses.Add(l[i].Value);
-                if ((i - 1) % 4 == 0) ports.Add(int.Parse(l[i].Value));
+                if (i % 4 == 0) addresses.Add(proxyList[i]);
+                if ((i - 1) % 4 == 0) ports.Add(int.Parse(proxyList[i]));
             }
             var myProxies = addresses.Select((t, i) => new MyProxy { IpAddress = t, Port = ports[i]});
             var proxyConcat= myProxies.Select(myProxy => myProxy.IpAddress + ":" + myProxy.Port).ToList();
