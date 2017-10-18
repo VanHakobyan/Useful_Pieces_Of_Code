@@ -41,25 +41,27 @@ namespace Youtube_Wiew_Increaser
         {
             var url = UrlBox.Text;
             if (string.IsNullOrEmpty(UrlBox.Text)) url = "https://www.youtube.com/watch?v=BTZ91oTr6mQ&t=1s";
-            if (string.IsNullOrEmpty(url))
-                return -1;
             var list = Proxys.CatchFreeProxies();
             var index = 0;
-            var profile = new FirefoxProfile();
-            Proxy proxys;
+            Proxy proxy;
             while (index++ != 300)
             {
                 try
                 {
-                    proxys = new Proxy
+                  
+                    proxy = new Proxy
                     {
                         HttpProxy = list[index],
                         FtpProxy = list[index],
                         SslProxy = list[index]
                     };
-                    profile.SetProxyPreferences(proxys);
 
-                    var driver = new FirefoxDriver(profile);
+                    var options=new FirefoxOptions();
+                    options.Proxy = proxy;
+                    options.Profile = new FirefoxProfile();
+                    options.Profile.SetProxyPreferences(proxy);
+                    var driver = new FirefoxDriver(options.Profile);
+
                     void Action()
                     {
                         driver.Navigate().GoToUrl(url);
@@ -67,8 +69,8 @@ namespace Youtube_Wiew_Increaser
                     }
 
                     await Task.Run(() => Action()).ConfigureAwait(true);
-                    await Task.Delay(3000).ConfigureAwait(true);
-                    driver.Quit();
+                    await Task.Delay(5000).ConfigureAwait(true);
+                    //driver.Quit();
                     await Task.WhenAll().ConfigureAwait(true);
                     lock (this)
                     {
@@ -77,7 +79,7 @@ namespace Youtube_Wiew_Increaser
                 }
                 catch (Exception exception)
                 {
-                    await Task.Run(() => MessageBox.Show($"{exception.Message}  {exception.StackTrace}")).ConfigureAwait(true);
+                    //await Task.Run(() => MessageBox.Show($"{exception.Message}  {exception.StackTrace}")).ConfigureAwait(true);
                 }
             }
             return index;
