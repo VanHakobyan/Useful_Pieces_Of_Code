@@ -57,11 +57,11 @@ namespace Youtube_Wiew_Increaser
                     };
 
                     var options=new FirefoxOptions();
-                    options.Proxy = proxy;
+                    
                     options.Profile = new FirefoxProfile();
                     options.Profile.SetProxyPreferences(proxy);
+                    //options.Profile.s = ;
                     var driver = new FirefoxDriver(options.Profile);
-
                     void Action()
                     {
                         driver.Navigate().GoToUrl(url);
