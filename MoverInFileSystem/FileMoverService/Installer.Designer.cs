@@ -1,4 +1,4 @@
-﻿namespace Test
+﻿namespace FileMoverService
 {
     partial class Installer
     {

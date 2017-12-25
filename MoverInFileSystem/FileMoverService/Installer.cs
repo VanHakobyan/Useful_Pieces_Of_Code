@@ -7,7 +7,7 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Threading.Tasks;
 
-namespace Test
+namespace FileMoverService
 {
     [RunInstaller(true)]
     public partial class Installer : System.Configuration.Install.Installer

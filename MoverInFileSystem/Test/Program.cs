@@ -7,6 +7,8 @@ using System.Net.Sockets;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using FileMoverService;
+using Microsoft.Win32;
 
 namespace Test
 {
@@ -14,17 +16,11 @@ namespace Test
     {
         static void Main(string[] args)
         {
-          
-            //bool success;
-            //var username = @"vanik.Hakobyan";
-            //var password = "VAN606580##";
-            //var hostname = @"ftp://172.16.79.185:21";
-
-            var existingFilepath = @"D:\odds_comparison_tool.rar";
-            var newFilepath = @"C:\odds_comparison_tool.rar";
-            var fileSize = GetFileSize(existingFilepath);
-            if (double.Parse(fileSize.Split(' ').First())>10 && fileSize.Split(' ').Last()=="MB")
-            File.Move(existingFilepath,newFilepath);
+            //var sourceFileName = @"D:\move\StsParserOnlyPolish3rdLeague.rar";
+            //var destFileName = @"D:\newTemp\p.rar";
+            //File.Move(sourceFileName, destFileName);
+            Service1 s=new Service1();
+            s.TimerOnElapsed(null, null);
         }
 
         private static string GetFileSize(string filename)
