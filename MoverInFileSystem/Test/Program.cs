@@ -16,8 +16,8 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            //var sourceFileName = @"D:\move\StsParserOnlyPolish3rdLeague.rar";
-            //var destFileName = @"D:\newTemp\p.rar";
+            //var sourceFileName = @"D:\move\TempBetMove.log";
+            //var destFileName = @"D:\lsoq2ekl.uut";
             //File.Move(sourceFileName, destFileName);
             Service1 s=new Service1();
             s.TimerOnElapsed(null, null);
