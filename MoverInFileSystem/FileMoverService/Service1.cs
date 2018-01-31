@@ -50,7 +50,7 @@ namespace FileMoverService
             }
             timer.Enabled = true;
         }
-        private List<string> GetFileNames(string currentDir)
+        private IEnumerable<string> GetFileNames(string currentDir)
         {
             return Directory.GetFiles(currentDir).ToList();
         }
