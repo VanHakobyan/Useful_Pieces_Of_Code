@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMTP.MessageSender", "SMTP.MessageSender\SMTP.MessageSender.csproj", "{CB75AFD4-7D43-42B2-A36A-60939FBF46A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MesageSender", "MesageSender\MesageSender.csproj", "{31F1BD95-9DAD-42D0-9C13-802C87031E07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB75AFD4-7D43-42B2-A36A-60939FBF46A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB75AFD4-7D43-42B2-A36A-60939FBF46A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB75AFD4-7D43-42B2-A36A-60939FBF46A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB75AFD4-7D43-42B2-A36A-60939FBF46A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F1BD95-9DAD-42D0-9C13-802C87031E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F1BD95-9DAD-42D0-9C13-802C87031E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F1BD95-9DAD-42D0-9C13-802C87031E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F1BD95-9DAD-42D0-9C13-802C87031E07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {497D95EC-C5FA-4338-924A-A75DFDAB084B}
+	EndGlobalSection
+EndGlobal
