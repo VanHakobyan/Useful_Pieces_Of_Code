@@ -45,6 +45,12 @@ namespace Test
             Time.Text = string.Empty;
             Awesome.Visibility = Visibility.Hidden;
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            HidemeParser hidemeParser=new HidemeParser();
+            hidemeParser.GetProxy();
+        }
     }
 }
 
