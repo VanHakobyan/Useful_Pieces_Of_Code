@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProxyManiputation", "WebProxyManiputation\WebProxyManiputation.csproj", "{DA3F5250-4B99-46E7-BBA7-B572938C64C5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{A21249E9-2717-4354-8EC4-00A53462C75E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{8294A38A-C624-428E-8234-408717CD27FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DA3F5250-4B99-46E7-BBA7-B572938C64C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA3F5250-4B99-46E7-BBA7-B572938C64C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA3F5250-4B99-46E7-BBA7-B572938C64C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA3F5250-4B99-46E7-BBA7-B572938C64C5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A21249E9-2717-4354-8EC4-00A53462C75E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A21249E9-2717-4354-8EC4-00A53462C75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A21249E9-2717-4354-8EC4-00A53462C75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A21249E9-2717-4354-8EC4-00A53462C75E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8294A38A-C624-428E-8234-408717CD27FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8294A38A-C624-428E-8234-408717CD27FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8294A38A-C624-428E-8234-408717CD27FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8294A38A-C624-428E-8234-408717CD27FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
