@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DevExpress.Data.Utils;
 using Helpers;
+using Newtonsoft.Json;
 
 namespace Test
 {
@@ -27,11 +29,11 @@ namespace Test
         {
             InitializeComponent();
         }
-        private const string UrlDefoult = "https://m.sportsbet.com.au/sportsbook/navhierarchy";
+        private const string UrlDefault = "https://m.sportsbet.com.au/sportsbook/navhierarchy";
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             Awesome.Visibility = Visibility.Visible;
-            if (Url.Text == string.Empty) Url.Text = UrlDefoult;
+            if (Url.Text == string.Empty) Url.Text = UrlDefault;
             var response = await Helper.SendGetRequest(Url.Text, IpAddress.Text, Port.Text);
             Content.Text = response;
             Awesome.Visibility = Visibility.Hidden;
@@ -46,10 +48,17 @@ namespace Test
             Awesome.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
             HidemeParser hidemeParser=new HidemeParser();
-            hidemeParser.GetProxy();
+            var proxys =await hidemeParser.GetProxy();
+            var serializeObject = JsonConvert.SerializeObject(proxys,Formatting.Indented);
+            File.AppendAllText("D:\\proxies.json", serializeObject);
+        }
+
+        private void Url_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key==Key.Enter) Button_Click(null,null);
         }
     }
 }

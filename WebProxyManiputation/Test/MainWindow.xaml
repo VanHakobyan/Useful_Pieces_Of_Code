@@ -10,18 +10,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="800">
     <Grid>
-        <TextBox Name="Url" HorizontalAlignment="Left" Height="23" Margin="154,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="555"/>
-        <TextBox Name="IpAddress" HorizontalAlignment="Left" Height="23" Margin="154,92,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="207"/>
-        <TextBlock HorizontalAlignment="Left" Margin="61,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="76"><Run Text="URL&#x9;"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="61,92,0,0" TextWrapping="Wrap" Text="IP Address" VerticalAlignment="Top" Width="76" Height="23"/>
-        <TextBlock HorizontalAlignment="Left" Margin="381,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" Height="23"><Run Text="Port"/><LineBreak/><Run/></TextBlock>
-        <Button Content="Test" HorizontalAlignment="Left" Margin="573,92,0,0" VerticalAlignment="Top" Width="136" Height="23" Click="Button_Click"/>
-        <TextBox Name="Port" HorizontalAlignment="Left" Height="23" Margin="447,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" />
-        <TextBox Name="Content" HorizontalAlignment="Left" Height="310" Margin="61,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="648"/>
-        <Button Content="Cleare" HorizontalAlignment="Left" Margin="573,482,0,0" VerticalAlignment="Top" Width="136" Height="26" Click="Button_Click_1"/>
-        <TextBlock HorizontalAlignment="Left" Margin="61,482,0,0" TextWrapping="Wrap" Text="Response Time" VerticalAlignment="Top" Height="26" Width="103" FontSize="14"/>
-        <TextBlock Name="Time" HorizontalAlignment="Left" Margin="205,482,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="156" RenderTransformOrigin="0.506,1.4"/>
-        <fa:ImageAwesome Name="Awesome" Width="200" Height="200" Icon="Spinner" Spin="True" Visibility="Hidden" SpinDuration="2" />
-        <Button Content="Parse" HorizontalAlignment="Left" Margin="332,567,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" ></RowDefinition >
+            <RowDefinition Height="Auto" ></RowDefinition >
+            <RowDefinition Height="Auto" ></RowDefinition >
+            <RowDefinition Height="Auto" ></RowDefinition >
+        </Grid.RowDefinitions>
+        <StackPanel Margin="50 50 50 5" Orientation="Horizontal" Grid.Row="0">
+            <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="76"><Run Text="URL&#x9;"/><LineBreak/><Run/></TextBlock>
+            <TextBox Name="Url" HorizontalAlignment="Left" Height="23" Margin="10,10,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="575" KeyDown="Url_OnKeyDown" />
+        </StackPanel>
+        <StackPanel Margin="50 5 50 5 " Orientation="Horizontal" Grid.Row="1">
+            <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="IP Address" VerticalAlignment="Top" Width="76" Height="23"/>
+            <TextBox Name="IpAddress" HorizontalAlignment="Left" Height="23"  Margin="10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="207"  KeyDown="Url_OnKeyDown"/>
+            <TextBlock HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" Height="23"><Run Text="Port"/><LineBreak/><Run/></TextBlock>
+            <TextBox Name="Port" HorizontalAlignment="Left" Height="23"  Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="121"  KeyDown="Url_OnKeyDown" />
+            <Button Content="Test" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="136" Height="23" Click="Button_Click"/>
+        </StackPanel>
+
+        <StackPanel Margin="50 5 50 5" Orientation="Horizontal" Grid.Row="2">
+
+            <TextBox Name="Content" HorizontalAlignment="Left" Height="310"  Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="674"/>
+        </StackPanel>
+        <StackPanel Margin="50,5,50,107" Orientation="Horizontal" Grid.Row="3">
+
+            <TextBlock HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" Text="Response Time" VerticalAlignment="Top" Height="26" Width="103" FontSize="14"/>
+            <TextBlock Name="Time" HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="156" RenderTransformOrigin="0.506,1.4"/>
+            <Button Content="Cleare" HorizontalAlignment="Left"  Margin="250,10,10,0" VerticalAlignment="Top" Width="132" Height="26" Click="Button_Click_1"/>
+        </StackPanel>
+        <fa:ImageAwesome Grid.Row="2" Name="Awesome" Icon="Spinner" Spin="True" Visibility="Hidden" SpinDuration="2" Margin="296,53,296,54" />
     </Grid>
 </Window>

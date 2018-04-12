@@ -47,6 +47,7 @@
     <Compile Include="HidemeParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProxyModel.cs" />
+    <Compile Include="RequestManipulator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
