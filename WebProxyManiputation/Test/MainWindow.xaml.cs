@@ -29,7 +29,7 @@ namespace Test
         {
             InitializeComponent();
         }
-        private const string UrlDefault = "https://m.sportsbet.com.au/sportsbook/navhierarchy";
+        private const string UrlDefault = "https://www.google.com/";
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             Awesome.Visibility = Visibility.Visible;
@@ -47,18 +47,9 @@ namespace Test
             Time.Text = string.Empty;
             Awesome.Visibility = Visibility.Hidden;
         }
-
-        private async void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            HidemeParser hidemeParser=new HidemeParser();
-            var proxys =await hidemeParser.GetProxy();
-            var serializeObject = JsonConvert.SerializeObject(proxys,Formatting.Indented);
-            File.AppendAllText("D:\\proxies.json", serializeObject);
-        }
-
         private void Url_OnKeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key==Key.Enter) Button_Click(null,null);
+            if (e.Key == Key.Enter) Button_Click(null, null);
         }
     }
 }
