@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +38,7 @@ namespace Helpers
                 {
                     if (stream != null)
                     {
-                        stream.ReadTimeout = 300000;
+                        stream.ReadTimeout = 30000;
 
                         using (var streamReader = new StreamReader(stream, Encoding.GetEncoding("UTF-8")))
                         {

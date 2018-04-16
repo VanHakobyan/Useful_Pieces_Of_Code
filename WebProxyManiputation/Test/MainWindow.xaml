@@ -25,7 +25,7 @@
             <TextBox Name="IpAddress" HorizontalAlignment="Left" Height="23"  Margin="10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="207"  KeyDown="Url_OnKeyDown"/>
             <TextBlock HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" Height="23" FontWeight="Bold"><Run Text="Port"/><LineBreak/><Run/></TextBlock>
             <TextBox Name="Port" HorizontalAlignment="Left" Height="23"  Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="121"  KeyDown="Url_OnKeyDown" />
-            <Button Content="Test" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="136" Height="23" Click="Button_Click" FontFamily="Monotype Corsiva" FontWeight="Bold" FontSize="19"/>
+            <Button Content="Test" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="136" Height="23" Click="TestClick" FontFamily="Monotype Corsiva" FontWeight="Bold" FontSize="19"/>
         </StackPanel>
 
         <StackPanel Margin="50 5 50 5" Orientation="Horizontal" Grid.Row="2">
@@ -36,7 +36,7 @@
 
             <TextBlock HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" Text="Response Time" VerticalAlignment="Top" Height="26" Width="103" FontSize="14" FontWeight="Bold"/>
             <TextBlock Name="Time" HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="156" RenderTransformOrigin="0.506,1.4" FontStyle="Italic"/>
-            <Button Content="Cleare" HorizontalAlignment="Left"  Margin="250,10,10,0" VerticalAlignment="Top" Width="132" Height="26" Click="Button_Click_1" FontFamily="Snap ITC" FontSize="16"/>
+            <Button Content="Clear" HorizontalAlignment="Left"  Margin="250,10,10,0" VerticalAlignment="Top" Width="132" Height="26" Click="Clear" FontFamily="Snap ITC" FontSize="16"/>
         </StackPanel>
         <fa:ImageAwesome Grid.Row="2" Name="Awesome" Icon="Spinner" Spin="True" Visibility="Hidden" SpinDuration="2" Margin="296,53,296,54" />
     </Grid>
