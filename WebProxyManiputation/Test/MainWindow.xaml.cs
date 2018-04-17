@@ -20,15 +20,28 @@ namespace Test
 
         private const string UrlDefault = "https://www.google.com/";
         private const string FooMessage = "Please input Ip or/and Port";
-       
+
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private async void TestClick(object sender, RoutedEventArgs e)
         {
-            if (Port.Text == Empty || IpAddress.Text == Empty)
+            if (IpAddress.Text == Empty)
             {
                 Content.Text = FooMessage;
                 return;
+            }
+            if (Port.Text == Empty)
+            {
+                if (IpAddress.Text.Contains(":"))
+                {
+                    Port.Text = IpAddress.Text.Split(':')[1];
+                    IpAddress.Text = IpAddress.Text.Split(':')[0];
+                }
+                else
+                {
+                    Content.Text = FooMessage;
+                    return;
+                }
             }
             Awesome.Visibility = Visibility.Visible;
             if (Url.Text == Empty) Url.Text = UrlDefault;
@@ -37,7 +50,7 @@ namespace Test
             Awesome.Visibility = Visibility.Hidden;
             Time.Text = DateTime.Now.ToString(CultureInfo.InvariantCulture);
         }
-        
+
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Clear(object sender, RoutedEventArgs e)

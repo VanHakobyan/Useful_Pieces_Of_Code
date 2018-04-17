@@ -22,7 +22,21 @@
         </StackPanel>
         <StackPanel Margin="50 5 50 5 " Orientation="Horizontal" Grid.Row="1">
             <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="IP Address" VerticalAlignment="Top" Width="76" Height="23" FontWeight="Bold"/>
-            <TextBox Name="IpAddress" HorizontalAlignment="Left" Height="23"  Margin="10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="207"  KeyDown="Url_OnKeyDown"/>
+            <Grid>
+                <TextBox x:Name="IpAddress" HorizontalAlignment="Left" Height="23" Margin="10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="207"  KeyDown="Url_OnKeyDown"/>
+                <TextBlock Padding="6 3 3 6" IsHitTestVisible="False" Text='Enter IP adrress and/or port using ":"' VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,9,0,9" Foreground="DarkGray" Width="207">
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=IpAddress}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
             <TextBlock HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" Height="23" FontWeight="Bold"><Run Text="Port"/><LineBreak/><Run/></TextBlock>
             <TextBox Name="Port" HorizontalAlignment="Left" Height="23"  Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="121"  KeyDown="Url_OnKeyDown" />
             <Button Content="Test" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Top" Width="136" Height="23" Click="TestClick" FontFamily="Monotype Corsiva" FontWeight="Bold" FontSize="19"/>
