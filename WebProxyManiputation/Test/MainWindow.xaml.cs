@@ -20,6 +20,8 @@ namespace Test
 
         private const string UrlDefault = "https://www.google.com/";
         private const string FooMessage = "Please input Ip or/and Port";
+        private const string CancelContent = "Cancel";
+        private const string ClearContent = "Clear";
 
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -44,10 +46,14 @@ namespace Test
                 }
             }
             Awesome.Visibility = Visibility.Visible;
+            TestButton.IsEnabled = false;
+            ClearButton.Content = CancelContent;
             if (Url.Text == Empty) Url.Text = UrlDefault;
             var response = await Helper.SendGetRequest(Url.Text, IpAddress.Text, Port.Text);
             Content.Text = response;
+            ClearButton.Content = ClearContent;
             Awesome.Visibility = Visibility.Hidden;
+            TestButton.IsEnabled = true;
             Time.Text = DateTime.Now.ToString(CultureInfo.InvariantCulture);
         }
 
