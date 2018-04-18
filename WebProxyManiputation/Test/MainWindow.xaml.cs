@@ -45,6 +45,11 @@ namespace Test
                     return;
                 }
             }
+            if (Port.Text != Empty && IpAddress.Text.Contains(":"))
+            {
+                Port.Text = IpAddress.Text.Split(':')[1];
+                IpAddress.Text = IpAddress.Text.Split(':')[0];
+            }
             Awesome.Visibility = Visibility.Visible;
             TestButton.IsEnabled = false;
             ClearButton.Content = CancelContent;
