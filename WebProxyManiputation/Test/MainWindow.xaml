@@ -18,7 +18,21 @@
         </Grid.RowDefinitions>
         <StackPanel Margin="50 50 50 5" Orientation="Horizontal" Grid.Row="0">
             <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="76" FontWeight="Bold"><Run Text="URL&#x9;"/><LineBreak/><Run/></TextBlock>
-            <TextBox Name="Url" HorizontalAlignment="Left" Height="23" Margin="10,10,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="575" KeyDown="Url_OnKeyDown" />
+            <Grid>
+                <TextBox x:Name="Url" HorizontalAlignment="Left" Height="23" Margin="10,10,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="575" KeyDown="Url_OnKeyDown" />
+                <TextBlock Padding="6 3 3 6" IsHitTestVisible="False" Text='Enter the test address' VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,9,0,9" Foreground="DarkGray" Width="190">
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=Url}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
         </StackPanel>
         <StackPanel Margin="50 5 50 5 " Orientation="Horizontal" Grid.Row="1">
             <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="IP Address" VerticalAlignment="Top" Width="76" Height="23" FontWeight="Bold"/>
