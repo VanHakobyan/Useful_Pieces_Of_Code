@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
+using System.Net;
 using System.Windows;
 using System.Windows.Input;
 using Helpers;
@@ -20,6 +22,8 @@ namespace Test
 
         private const string UrlDefault = "https://www.google.com/";
         private const string FooMessage = "Please input Ip or/and Port";
+        private const string IpErrorMessage = "Please input Correct Ip";
+        private const string PortErrorMessage = "Please input Correct Port 1 to 65535";
         private const string CancelContent = "Cancel";
         private const string ClearContent = "Clear";
 
@@ -27,6 +31,14 @@ namespace Test
         /// <param name="e"></param>
         private async void TestClick(object sender, RoutedEventArgs e)
         {
+           
+            var toParse = IpAddress.Text.Split(':')[0];
+            IPAddress.TryParse(toParse, out var parseIpAddress);
+            if (parseIpAddress is null)
+            {
+                Content.Text = IpErrorMessage;
+                return;
+            }
             if (IpAddress.Text == Empty)
             {
                 Content.Text = FooMessage;
@@ -49,6 +61,12 @@ namespace Test
             {
                 Port.Text = IpAddress.Text.Split(':')[1];
                 IpAddress.Text = IpAddress.Text.Split(':')[0];
+            }
+            int.TryParse(Port.Text, out var parsePort);
+            if (parsePort < 0 && parsePort > 65535)
+            {
+                Content.Text = PortErrorMessage;
+                return;
             }
             Awesome.Visibility = Visibility.Visible;
             TestButton.IsEnabled = false;
@@ -78,6 +96,11 @@ namespace Test
         {
             if (e.Key == Key.Enter) TestClick(null, null);
         }
+
+        private void GetProxy_Click(object sender, RoutedEventArgs e)=> new Proxies().Show();
+        
+        
+        
     }
 }
 

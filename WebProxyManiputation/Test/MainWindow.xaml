@@ -77,8 +77,9 @@
         <StackPanel Margin="50,5,50,107" Orientation="Horizontal" Grid.Row="3">
 
             <TextBlock HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" Text="Response Time" VerticalAlignment="Top" Height="26" Width="103" FontSize="14" FontWeight="Bold"/>
-            <TextBlock Name="Time" HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="156" RenderTransformOrigin="0.506,1.4" FontStyle="Italic"/>
-            <Button x:Name="ClearButton" Content="Clear" HorizontalAlignment="Left"  Margin="250,10,10,0" VerticalAlignment="Top" Width="132" Height="26" Click="Clear" FontFamily="Snap ITC" FontSize="16"/>
+            <TextBlock  Name="Time" HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="156" RenderTransformOrigin="0.506,1.4" FontStyle="Italic" FontSize="16"/>
+            <Button x:Name="GetProxy" Content="Get Proxy" Margin="30 10 10 10"  Height="26" Width="131" VerticalAlignment="Top"  HorizontalAlignment="Left" FontSize="14" FontWeight="Bold" FontFamily="Sitka Text" Click="GetProxy_Click" ></Button>
+            <Button x:Name="ClearButton" Content="Clear" HorizontalAlignment="Left"  Margin="85,10,10,0" VerticalAlignment="Top" Width="128" Height="26" Click="Clear" FontFamily="Snap ITC" FontSize="16"/>
         </StackPanel>
         <fa:ImageAwesome Grid.Row="2" Name="Awesome" Icon="Spinner" Spin="True" Visibility="Hidden" SpinDuration="2" Margin="296,53,296,54" />
     </Grid>
