@@ -8,13 +8,21 @@ using Newtonsoft.Json;
 
 namespace Helpers
 {
-   public class SimpleProxys
+    public class SimpleProxys
     {
         public IEnumerable<ProxyModel> GetProxys()
         {
-            var jsonString = File.ReadAllText($@"{Environment.CurrentDirectory}\Proxies.json".Replace("\\bin\\Debug",""));
-            var jsonObject = JsonConvert.DeserializeObject<List<ProxyModel>>(jsonString);
-            return jsonObject.Take(10);
+            try
+            {
+                var jsonString = File.ReadAllText($@"{Environment.CurrentDirectory}\Proxies.json".Replace("\\bin\\Debug", "").Replace("\\bin\\Release", ""));
+                var jsonObject = JsonConvert.DeserializeObject<List<ProxyModel>>(jsonString);
+                return jsonObject.Take(100);
+            }
+            catch (Exception ex)
+            {
+                File.AppendAllText(@"D:\proxyWpf.log", $"{Environment.CurrentDirectory}");
+                return null;
+            }
         }
     }
 }
