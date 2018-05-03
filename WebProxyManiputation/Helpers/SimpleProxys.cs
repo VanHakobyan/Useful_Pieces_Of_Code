@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace Helpers
@@ -20,7 +18,7 @@ namespace Helpers
             }
             catch (Exception ex)
             {
-                File.AppendAllText(@"D:\proxyWpf.log", $"{Environment.CurrentDirectory}");
+                //File.AppendAllText(@"D:\proxyWpf.log", $"{Environment.CurrentDirectory}");
                 return null;
             }
         }
