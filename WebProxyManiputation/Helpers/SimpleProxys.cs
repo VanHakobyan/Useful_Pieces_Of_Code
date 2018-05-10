@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml;
 using Newtonsoft.Json;
 
 namespace Helpers
@@ -12,13 +13,10 @@ namespace Helpers
         {
             try
             {
-                var jsonString = "";//File.ReadAllText($@"{Environment.CurrentDirectory}\Proxies.json".Replace("\\bin\\Debug", "").Replace("\\bin\\Release", ""));
-                var jsonObject = JsonConvert.DeserializeObject<List<ProxyModel>>(jsonString);
-                return jsonObject.Take(100);
+                return null;
             }
             catch (Exception ex)
             {
-                //File.AppendAllText(@"D:\proxyWpf.log", $"{Environment.CurrentDirectory}");
                 return null;
             }
         }

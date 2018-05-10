@@ -88,6 +88,7 @@ namespace Test
             Content.Text = Empty;
             Time.Text = Empty;
             Awesome.Visibility = Visibility.Hidden;
+            TestButton.IsEnabled = true;
         }
 
         /// <param name="sender"></param>
@@ -97,10 +98,11 @@ namespace Test
             if (e.Key == Key.Enter) TestClick(null, null);
         }
 
-        private void GetProxy_Click(object sender, RoutedEventArgs e)=> new Proxies().Show();
-        
-        
-        
+        private void GetProxy_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Not Implemented !!!");
+            // new Proxies().Show();
+        }
     }
 }
 

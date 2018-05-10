@@ -23,17 +23,13 @@ namespace Helpers
                 var request = (HttpWebRequest)WebRequest.Create(uri);
                 request.Method = "GET";
                 request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36";
-                //request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8";
-                //request.Timeout = 300000;
-                //request.Connection = "keep-alive";
-                //request.Host = "m.sportsbet.com.au";
                 var builder = new UriBuilder(ipAddress)
                 {
                     Port = int.Parse(port)
                 };
                 IWebProxy proxy = new WebProxy(builder.Uri);
                 request.Proxy = proxy;
-
+                request.Timeout = 30000;
                 using (var stream = (await request.GetResponseAsync()).GetResponseStream())
                 {
                     if (stream != null)
