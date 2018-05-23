@@ -19,7 +19,9 @@
         <StackPanel Margin="50 50 50 5" Orientation="Horizontal" Grid.Row="0">
             <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="76" FontWeight="Bold"><Run Text="URL&#x9;"/><LineBreak/><Run/></TextBlock>
             <Grid>
-                <TextBox x:Name="Url" HorizontalAlignment="Left" Height="23" Margin="10,10,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="575" KeyDown="Url_OnKeyDown" />
+                <!--<TextBox x:Name="Url" HorizontalAlignment="Left" Height="23" Margin="10,10,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="575" KeyDown="Url_OnKeyDown" />-->
+                <ComboBox IsEditable="True" x:Name="Url" HorizontalAlignment="Left" Height="23" Margin="10,10,-14,0" VerticalAlignment="Top" Width="420" KeyDown="Url_OnKeyDown" ></ComboBox>
+                <Button FontFamily="Verdana" FontWeight="Bold" Content="Add Url" Margin="451,10,-167,0" VerticalAlignment="Top" Height="23" RenderTransformOrigin="0.5,0.5" Click="Button_Click"/>
                 <TextBlock Padding="6 3 3 6" IsHitTestVisible="False" Text='Enter the test address' VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,9,0,9" Foreground="DarkGray" Width="190">
                     <TextBlock.Style>
                         <Style TargetType="{x:Type TextBlock}">

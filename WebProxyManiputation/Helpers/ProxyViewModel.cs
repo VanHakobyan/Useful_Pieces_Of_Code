@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Helpers
 {
-    public class Proxies
+    public class ProxyViewModel
     {
-        public List<ProxyModel> GetProxies()
-        {
-            return null;
-        }
+        public string IpAddress { get; set; }
     }
 }

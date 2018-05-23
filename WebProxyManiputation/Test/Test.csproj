@@ -140,6 +140,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Proxies.json" />
+    <None Include="Stat\proxies.csv" />
     <None Include="Test_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -166,5 +167,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

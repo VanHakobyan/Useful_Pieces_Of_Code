@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Net;
+using System.Timers;
 using System.Windows;
 using System.Windows.Input;
 using Helpers;
@@ -18,20 +21,30 @@ namespace Test
         public MainWindow()
         {
             InitializeComponent();
+            Url.Items.Add(new KeyValuePair<string, string>("Youtube", @"https://www.Youtube.com"));
+            Url.Items.Add(new KeyValuePair<string, string>("Google", @"https://www.Google.com"));
+            Url.Items.Add(new KeyValuePair<string, string>("SportsBet", @"https://m.sportsbet.com.au/sportsbook/navhierarchy"));
+            _timer.Elapsed += TimerOnElapsed;
         }
 
-        private const string UrlDefault = "https://www.google.com/";
+        private void TimerOnElapsed(object sender, ElapsedEventArgs elapsedEventArgs)
+        {
+            Time.Text = $"{_sw.Elapsed.TotalSeconds} second";
+        }
+
         private const string FooMessage = "Please input Ip or/and Port";
         private const string IpErrorMessage = "Please input Correct Ip";
         private const string PortErrorMessage = "Please input Correct Port 1 to 65535";
         private const string CancelContent = "Cancel";
         private const string ClearContent = "Clear";
-
+        private Timer _timer = new Timer(1);
+        private Stopwatch _sw = new Stopwatch();
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private async void TestClick(object sender, RoutedEventArgs e)
         {
-           
+            _sw.Start();
+            //_timer.Start();
             var toParse = IpAddress.Text.Split(':')[0];
             IPAddress.TryParse(toParse, out var parseIpAddress);
             if (parseIpAddress is null)
@@ -71,13 +84,15 @@ namespace Test
             Awesome.Visibility = Visibility.Visible;
             TestButton.IsEnabled = false;
             ClearButton.Content = CancelContent;
-            if (Url.Text == Empty) Url.Text = UrlDefault;
-            var response = await Helper.SendGetRequest(Url.Text, IpAddress.Text, Port.Text);
+            if (Url.Text == Empty) Url.Text = Url.Items[0].ToString();
+            var response = await Helper.SendGetRequest(Url.Text.Split(',').Last().Replace("]", ""), IpAddress.Text, Port.Text);
             Content.Text = response;
             ClearButton.Content = ClearContent;
             Awesome.Visibility = Visibility.Hidden;
             TestButton.IsEnabled = true;
-            Time.Text = DateTime.Now.ToString(CultureInfo.InvariantCulture);
+            _timer.Stop();
+            Time.Text = $"{_sw.Elapsed.TotalSeconds} second";
+            _sw.Reset();
         }
 
         /// <param name="sender"></param>
@@ -100,8 +115,13 @@ namespace Test
 
         private void GetProxy_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Not Implemented !!!");
-            // new Proxies().Show();
+
+            new Proxies().Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

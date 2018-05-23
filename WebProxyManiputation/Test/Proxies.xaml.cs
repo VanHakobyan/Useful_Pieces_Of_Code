@@ -16,7 +16,7 @@ namespace Test
         {
             var proxies = new SimpleProxys();
             var proxyModels = proxies.GetProxys().ToList();
-            ProxyDataGrid.ItemsSource = proxyModels.Select(x => new { x.Country, x.Type, x.Ip, x.Port }).OrderBy(x=>x.Country).ToList();
+            ProxyDataGrid.ItemsSource = proxyModels;
         }
     }
 }

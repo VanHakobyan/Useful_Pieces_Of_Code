@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Test"
         mc:Ignorable="d"
-        Title="Proxies" Height="550" Width="440" MaxHeight="500" ResizeMode="CanMinimize">
+        Title="Proxies" Height="550" Width="200" MaxHeight="500" ResizeMode="CanMinimize">
     <Grid>
         <DataGrid
             x:Name="ProxyDataGrid"
