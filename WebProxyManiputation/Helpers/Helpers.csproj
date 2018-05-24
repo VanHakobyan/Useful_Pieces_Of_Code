@@ -36,6 +36,7 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +53,8 @@
     <Compile Include="ProxyModel.cs" />
     <Compile Include="ProxyViewModel.cs" />
     <Compile Include="SimpleProxys.cs" />
+    <Compile Include="XmlModels\root.cs" />
+    <Compile Include="XmlModels\rootRow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

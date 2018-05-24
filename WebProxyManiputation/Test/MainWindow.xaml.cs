@@ -115,7 +115,6 @@ namespace Test
 
         private void GetProxy_Click(object sender, RoutedEventArgs e)
         {
-
             new Proxies().Show();
         }
 

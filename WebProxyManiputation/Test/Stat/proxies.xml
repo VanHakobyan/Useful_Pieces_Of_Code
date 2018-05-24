@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<root>
+<row>
+  <IP>183.88.217.201</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>183.88.217.201</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>66.82.123.234</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>178.23.151.67</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>61.91.235.226</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>103.213.205.9</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>87.117.46.28</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>82.114.65.14</IP>
+  <PORT>53281</PORT>
+</row>
+<row>
+  <IP>43.255.22.186</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>143.0.10.114</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>159.65.143.250</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>187.85.140.153</IP>
+  <PORT>20183</PORT>
+</row>
+<row>
+  <IP>80.211.148.100</IP>
+  <PORT>8888</PORT>
+</row>
+<row>
+  <IP>120.51.211.108</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>80.211.232.142</IP>
+  <PORT>8888</PORT>
+</row>
+<row>
+  <IP>34.217.107.89</IP>
+  <PORT>8888</PORT>
+</row>
+<row>
+  <IP>185.22.173.130</IP>
+  <PORT>10010</PORT>
+</row>
+<row>
+  <IP>185.5.249.186</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>170.79.16.19</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>213.52.28.93</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>14.139.58.45</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>80.211.228.238</IP>
+  <PORT>8888</PORT>
+</row>
+<row>
+  <IP>212.237.63.29</IP>
+  <PORT>8888</PORT>
+</row>
+<row>
+  <IP>80.211.182.207</IP>
+  <PORT>8888</PORT>
+</row>
+<row>
+  <IP>217.61.120.248</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>45.250.226.10</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>196.15.206.194</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>125.21.43.82</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>110.37.229.141</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>125.141.200.2</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>50.198.134.65</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>206.189.95.76</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>188.166.215.251</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>148.217.94.54</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>122.183.139.101</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>152.231.81.122</IP>
+  <PORT>53281</PORT>
+</row>
+<row>
+  <IP>82.137.250.213</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>188.165.4.79</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>66.82.144.29</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>115.70.28.209</IP>
+  <PORT>53281</PORT>
+</row>
+<row>
+  <IP>31.145.83.198</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>125.141.200.19</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>124.158.88.112</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>31.28.5.185</IP>
+  <PORT>63909</PORT>
+</row>
+<row>
+  <IP>125.141.200.4</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>177.66.145.154</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>200.60.130.162</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>5.2.243.134</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>191.7.195.181</IP>
+  <PORT>20183</PORT>
+</row>
+<row>
+  <IP>194.85.169.208</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>159.65.142.92</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>92.63.104.174</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>113.161.173.10</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>185.2.84.179</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>52.187.162.198</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>149.56.108.133</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>167.99.4.63</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>212.237.51.54</IP>
+  <PORT>8888</PORT>
+</row>
+<row>
+  <IP>151.80.140.233</IP>
+  <PORT>54566</PORT>
+</row>
+<row>
+  <IP>125.141.200.7</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>167.99.42.6</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>188.230.99.59</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>80.211.231.39</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>80.211.231.52</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>194.67.57.80</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>89.236.17.106</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>179.185.24.49</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>201.150.255.185</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>125.141.200.54</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>125.141.200.47</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>125.141.200.6</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>125.141.200.52</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>125.141.200.37</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>125.141.200.13</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>18.188.146.129</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>167.99.33.139</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>177.37.165.95</IP>
+  <PORT>20183</PORT>
+</row>
+<row>
+  <IP>82.76.220.243</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>138.185.22.181</IP>
+  <PORT>53281</PORT>
+</row>
+<row>
+  <IP>190.7.112.18</IP>
+  <PORT>3130</PORT>
+</row>
+<row>
+  <IP>89.232.34.169</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>109.105.40.39</IP>
+  <PORT>53281</PORT>
+</row>
+<row>
+  <IP>110.37.229.141</IP>
+  <PORT>1080</PORT>
+</row>
+<row>
+  <IP>31.145.7.130</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>94.242.58.142</IP>
+  <PORT>10010</PORT>
+</row>
+<row>
+  <IP>190.151.94.45</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>125.141.200.22</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>125.141.200.40</IP>
+  <PORT>80</PORT>
+</row>
+<row>
+  <IP>212.237.23.60</IP>
+  <PORT>2000</PORT>
+</row>
+<row>
+  <IP>122.183.139.107</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>41.220.26.86</IP>
+  <PORT>53281</PORT>
+</row>
+<row>
+  <IP>159.89.192.39</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>167.99.42.6</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>94.242.59.245</IP>
+  <PORT>10010</PORT>
+</row>
+<row>
+  <IP>14.139.189.211</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>42.104.84.107</IP>
+  <PORT>8080</PORT>
+</row>
+<row>
+  <IP>82.193.123.230</IP>
+  <PORT>53281</PORT>
+</row>
+<row>
+  <IP>87.121.83.130</IP>
+  <PORT>53281</PORT>
+</row>
+<row>
+  <IP>206.189.47.247</IP>
+  <PORT>3128</PORT>
+</row>
+<row>
+  <IP>80.211.157.69</IP>
+  <PORT>8888  </PORT>
+</row>
+</root>
