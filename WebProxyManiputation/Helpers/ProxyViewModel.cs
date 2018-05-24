@@ -10,5 +10,9 @@ namespace Helpers
     public class ProxyViewModel
     {
         public string IpAddress { get; set; }
+        public override string ToString()
+        {
+            return $"{IpAddress}";
+        }
     }
 }

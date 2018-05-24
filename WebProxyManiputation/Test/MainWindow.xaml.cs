@@ -24,6 +24,7 @@ namespace Test
             Url.Items.Add(new KeyValuePair<string, string>("Youtube", @"https://www.Youtube.com"));
             Url.Items.Add(new KeyValuePair<string, string>("Google", @"https://www.Google.com"));
             Url.Items.Add(new KeyValuePair<string, string>("SportsBet", @"https://m.sportsbet.com.au/sportsbook/navhierarchy"));
+            ComboIpAddress.ItemsSource = _proxys.GetProxys();
             _timer.Elapsed += TimerOnElapsed;
         }
 
@@ -31,7 +32,7 @@ namespace Test
         {
             Time.Text = $"{_sw.Elapsed.TotalSeconds} second";
         }
-
+        private SimpleProxys _proxys=new SimpleProxys();
         private const string FooMessage = "Please input Ip or/and Port";
         private const string IpErrorMessage = "Please input Correct Ip";
         private const string PortErrorMessage = "Please input Correct Port 1 to 65535";
@@ -45,24 +46,24 @@ namespace Test
         {
             _sw.Start();
             //_timer.Start();
-            var toParse = IpAddress.Text.Split(':')[0];
+            var toParse = ComboIpAddress.Text.Split(':')[0];
             IPAddress.TryParse(toParse, out var parseIpAddress);
             if (parseIpAddress is null)
             {
                 Content.Text = IpErrorMessage;
                 return;
             }
-            if (IpAddress.Text == Empty)
+            if (ComboIpAddress.Text == Empty)
             {
                 Content.Text = FooMessage;
                 return;
             }
             if (Port.Text == Empty)
             {
-                if (IpAddress.Text.Contains(":"))
+                if (ComboIpAddress.Text.Contains(":"))
                 {
-                    Port.Text = IpAddress.Text.Split(':')[1];
-                    IpAddress.Text = IpAddress.Text.Split(':')[0];
+                    Port.Text = ComboIpAddress.Text.Split(':')[1];
+                    ComboIpAddress.Text = ComboIpAddress.Text.Split(':')[0];
                 }
                 else
                 {
@@ -70,10 +71,10 @@ namespace Test
                     return;
                 }
             }
-            if (Port.Text != Empty && IpAddress.Text.Contains(":"))
+            if (Port.Text != Empty && ComboIpAddress.Text.Contains(":"))
             {
-                Port.Text = IpAddress.Text.Split(':')[1];
-                IpAddress.Text = IpAddress.Text.Split(':')[0];
+                Port.Text = ComboIpAddress.Text.Split(':')[1];
+                ComboIpAddress.Text = ComboIpAddress.Text.Split(':')[0];
             }
             int.TryParse(Port.Text, out var parsePort);
             if (parsePort < 0 && parsePort > 65535)
@@ -85,7 +86,7 @@ namespace Test
             TestButton.IsEnabled = false;
             ClearButton.Content = CancelContent;
             if (Url.Text == Empty) Url.Text = Url.Items[0].ToString();
-            var response = await Helper.SendGetRequest(Url.Text.Split(',').Last().Replace("]", ""), IpAddress.Text, Port.Text);
+            var response = await Helper.SendGetRequest(Url.Text.Split(',').Last().Replace("]", ""), ComboIpAddress.Text, Port.Text);
             Content.Text = response;
             ClearButton.Content = ClearContent;
             Awesome.Visibility = Visibility.Hidden;

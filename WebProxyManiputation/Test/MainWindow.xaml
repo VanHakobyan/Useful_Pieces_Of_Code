@@ -17,7 +17,7 @@
             <RowDefinition Height="Auto" ></RowDefinition >
         </Grid.RowDefinitions>
         <StackPanel Margin="50 50 50 5" Orientation="Horizontal" Grid.Row="0">
-            <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="76" FontWeight="Bold"><Run Text="URL&#x9;"/><LineBreak/><Run/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="76" FontWeight="Bold" FontSize="14"><Run Text="URL&#x9;"/><LineBreak/><Run/></TextBlock>
             <Grid>
                 <!--<TextBox x:Name="Url" HorizontalAlignment="Left" Height="23" Margin="10,10,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="575" KeyDown="Url_OnKeyDown" />-->
                 <ComboBox IsEditable="True" x:Name="Url" HorizontalAlignment="Left" Height="23" Margin="10,10,-14,0" VerticalAlignment="Top" Width="420" KeyDown="Url_OnKeyDown" ></ComboBox>
@@ -37,15 +37,15 @@
             </Grid>
         </StackPanel>
         <StackPanel Margin="50 5 50 5 " Orientation="Horizontal" Grid.Row="1">
-            <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="IP Address" VerticalAlignment="Top" Width="76" Height="23" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="IP Address" VerticalAlignment="Top" Width="76" Height="23" FontWeight="Bold" FontSize="14"/>
             <Grid>
-                <TextBox x:Name="IpAddress" HorizontalAlignment="Left" Height="23" Margin="10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="207"  KeyDown="Url_OnKeyDown"/>
+                <ComboBox IsEditable="True" x:Name="ComboIpAddress" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" VerticalAlignment="Top" Width="218" KeyDown="Url_OnKeyDown" ></ComboBox>
                 <TextBlock Padding="6 3 3 6" IsHitTestVisible="False" Text='Enter IP adrress and/or port using ":"' VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,9,0,9" Foreground="DarkGray" Width="207">
                     <TextBlock.Style>
                         <Style TargetType="{x:Type TextBlock}">
                             <Setter Property="Visibility" Value="Collapsed"/>
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding Text, ElementName=IpAddress}" Value="">
+                                <DataTrigger Binding="{Binding Text, ElementName=ComboIpAddress}" Value="">
                                     <Setter Property="Visibility" Value="Visible"/>
                                 </DataTrigger>
                             </Style.Triggers>
@@ -53,7 +53,7 @@
                     </TextBlock.Style>
                 </TextBlock>
             </Grid>
-            <TextBlock HorizontalAlignment="Left"  Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" Height="23" FontWeight="Bold"><Run Text="Port"/><LineBreak/><Run/></TextBlock>
+            <TextBlock HorizontalAlignment="Left"  Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" Height="23" FontWeight="Bold" TextAlignment="Center" FontSize="14"><Run Text="Port"/><LineBreak/><Run/></TextBlock>
             <Grid>
                 <TextBox Name="Port" HorizontalAlignment="Left" Height="23"  Margin="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="121"  KeyDown="Url_OnKeyDown" />
                 <TextBlock Padding="6 3 3 6" IsHitTestVisible="False" Text='Enter port' VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,9,0,9" Foreground="DarkGray" Width="121">
