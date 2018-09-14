@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="EmailSender.UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EmailSender.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" ></RowDefinition>
+            <RowDefinition Height="Auto" ></RowDefinition>
+            <RowDefinition Height="Auto" ></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Margin="20">
+            <TextBox Name="AddressBar" HorizontalAlignment="Left" Margin="30,0,0,0" Height="59" Width="1394" VerticalAlignment="Center" />
+            <Button Name="Send" Height="40" Width="150" HorizontalAlignment="Center" Margin="15" Content="Send" Click="Send_OnClick"></Button>
+        </StackPanel>
+
+    </Grid>
+</Page>
