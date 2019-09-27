@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET", "ASP.NET\ASP.NET.csproj", "{916B6B19-82FD-4E99-AC4C-6DE27DE266E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF\WPF.csproj", "{0815AB4B-E8D0-46F5-ACAF-39468BF8EC30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{916B6B19-82FD-4E99-AC4C-6DE27DE266E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916B6B19-82FD-4E99-AC4C-6DE27DE266E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916B6B19-82FD-4E99-AC4C-6DE27DE266E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916B6B19-82FD-4E99-AC4C-6DE27DE266E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0815AB4B-E8D0-46F5-ACAF-39468BF8EC30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0815AB4B-E8D0-46F5-ACAF-39468BF8EC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0815AB4B-E8D0-46F5-ACAF-39468BF8EC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0815AB4B-E8D0-46F5-ACAF-39468BF8EC30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89E67C16-AFB4-46E3-ADB7-D4E1202983F3}
+	EndGlobalSection
+EndGlobal
