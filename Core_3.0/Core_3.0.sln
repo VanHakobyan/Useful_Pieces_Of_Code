@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET", "ASP.NET\ASP.NET.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF\WPF.csproj", "{0815AB4B-E8D0-46F5-ACAF-39468BF8EC30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Docker", "Docker\Docker.csproj", "{EF4D9C4D-4962-44DE-A283-26A32692B5EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0815AB4B-E8D0-46F5-ACAF-39468BF8EC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0815AB4B-E8D0-46F5-ACAF-39468BF8EC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0815AB4B-E8D0-46F5-ACAF-39468BF8EC30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF4D9C4D-4962-44DE-A283-26A32692B5EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4D9C4D-4962-44DE-A283-26A32692B5EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4D9C4D-4962-44DE-A283-26A32692B5EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4D9C4D-4962-44DE-A283-26A32692B5EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
